@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #121212; // Dark background
   color: #e0e0e0; // Light text color for contrast
+  overflow-x: hidden; // Prevent horizontal scrolling
 }
 
 // Set default styles for headings
@@ -19,8 +20,12 @@ h1, h2, h3, h4, h5, h6 {
 
 // Add some padding to the main container
 .dashboard-container {
-  padding: 20px;
-  margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 // Add glow effect to buttons and links
@@ -34,3 +39,14 @@ button:hover, a:hover {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem; // Smaller heading on mobile
+    }
+  }

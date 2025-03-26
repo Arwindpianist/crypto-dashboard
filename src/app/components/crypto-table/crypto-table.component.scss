@@ -6,6 +6,7 @@ table {
     margin-top: 1rem;
     background-color: #2a2a2a; // Dark background for the table
     margin-bottom: 1rem;
+    overflow-x: auto; // Allow horizontal scrolling on small screens
 }
 
 th {
@@ -13,12 +14,14 @@ th {
     color: white;
     margin: auto;
     padding: 10px;
+    text-align: left;
 
 }
 
 td {
     padding: 10px;
     border: 1px solid #444; // Dark border for table cells
+    text-align: left;
 }
 
 tr:hover {
@@ -53,3 +56,20 @@ button {
     color: white;
   }
 }
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+    th, td {
+      font-size: 0.9rem; // Smaller font size on mobile
+    }
+  
+    .button-container {
+      flex-direction: row; // Arrange buttons horizontally on mobile
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hide-on-mobile {
+      display: none; // Hide elements on mobile
+    }
+  }

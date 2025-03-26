@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1e1e1e; // Darker background for the dashboard
+    background-color: #121212; // Darker background for the dashboard
     border-radius: 8px; // Rounded corners
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); // Subtle shadow for depth
@@ -12,6 +12,18 @@
   
   h1 {
     margin-bottom: 20px;
+    margin: auto;
     font-size: 2.5rem;
     color: #9c27b0; // Purple color for headings
+  }
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem; // Smaller heading on mobile
+    }
   }
