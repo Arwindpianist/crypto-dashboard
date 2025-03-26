@@ -1,4 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+// src/styles.scss
 
+// Import Angular Material theme
+@import '@angular/material/prebuilt-themes/magenta-violet.css';
+
+// Set a global font family
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; // Dark background
+  color: #e0e0e0; // Light text color for contrast
+}
+
+// Set default styles for headings
+h1, h2, h3, h4, h5, h6 {
+  color: #e0e0e0; // Light text for headings
+}
+
+// Add some padding to the main container
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+// Add glow effect to buttons and links
+button, a {
+  color: #e0e0e0; // Light text color
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  text-shadow: 0 0 10px rgba(128, 0, 128, 0.8); // Purple glow effect
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

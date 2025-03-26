@@ -1,0 +1,8 @@
+// src/app/components/crypto-chart/crypto-chart.component.scss
+
+ngx-charts-bar-vertical {
+    width: 100%; // Make the chart responsive
+    height: 400px; // Set a fixed height for the chart
+    margin-top: 20px; // Add some space above the chart
+    color:antiquewhite;
+  }

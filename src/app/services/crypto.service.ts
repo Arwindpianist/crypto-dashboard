@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Crypto } from '../models/crypto.model'; // Import the Crypto interface
 
 @Injectable({
   providedIn: 'root' // Ensures the service is available throughout the app
@@ -11,7 +12,7 @@ export class CryptoService {
   constructor(private http: HttpClient) {}
 
   // Method to fetch cryptocurrency data from CoinGecko
-  getCryptoData(): Observable<any[]> {
+  getCryptoData(): Observable<Crypto[]> {
     const params = {
       vs_currency: 'usd', // Currency to compare against
       order: 'market_cap_desc', // Order by market cap
@@ -20,6 +21,6 @@ export class CryptoService {
       sparkline: 'false' // Do not include sparkline data
     };
 
-    return this.http.get<any[]>(this.apiUrl, { params }); // Make the HTTP GET request
+    return this.http.get<Crypto[]>(this.apiUrl, { params }); // Make the HTTP GET request
   }
 }

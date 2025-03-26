@@ -1,0 +1,55 @@
+// src/app/components/crypto-table/crypto-table.component.scss
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #2a2a2a; // Dark background for the table
+    margin-bottom: 1rem;
+}
+
+th {
+    background-color: #9c27b0; // Purple background for header
+    color: white;
+    margin: auto;
+    padding: 10px;
+
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #444; // Dark border for table cells
+}
+
+tr:hover {
+    background-color: rgba(156, 39, 176, 0.2); // Light purple on hover
+}
+
+.filter-buttons {
+    margin-bottom: 1rem; // Space between buttons and table
+}
+
+.header-container {
+    display: flex; // Use flexbox for layout
+    flex-direction: row; // Arrange items in a row
+    align-items: center ; // Center items vertically
+    justify-content: space-between;
+}
+
+.button-container {
+  display: flex; // Use flexbox for button layout
+  flex-direction: column; // Stack buttons vertically
+  margin-left: 10px; // Space between the header name and buttons
+}
+
+button {
+  margin: 2px 0; // Space between buttons
+  background-color: #ffffff;
+  border-style: none;
+  border-radius: 2px;
+  color: purple;
+  &:hover {
+    background-color: #7b1fa2;
+    color: white;
+  }
+}

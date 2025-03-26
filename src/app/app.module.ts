@@ -1,21 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { NgxChartsModule } from '@swimlane/ngx-charts'; // Import NgxChartsModule
-import { DashboardComponent } from './pages/dashboard/dashboard.component'; // Import your DashboardComponent
-import { CryptoChartComponent } from './components/crypto-chart/crypto-chart.component'; // Import your CryptoChartComponent
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-     // Declare your other components here
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    NgxChartsModule,
-    DashboardComponent,
-    CryptoChartComponent// AppComponent is not included here since it's standalone
-  ],
-  providers: []
-})
-export class AppModule { }
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }), 
+    provideRouter(routes), 
+    provideClientHydration(), 
+    provideAnimationsAsync(),
+    provideHttpClient() // Add provideHttpClient here
+  ]
+};

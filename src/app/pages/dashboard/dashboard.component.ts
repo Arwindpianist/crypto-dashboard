@@ -24,7 +24,6 @@ export class DashboardComponent implements OnInit {
     this.cryptoService.getCryptoData().subscribe({
       next: (data) => {
         this.cryptos = data;
-        console.log('Fetched cryptos:', this.cryptos); // Log the fetched data
       },
       error: (error) => {
         console.error('Error fetching crypto data:', error);
